@@ -28,7 +28,7 @@ provider:
   resourcePolicy:
     Effect: Deny
     NotPrincipal:
-      AWS: arn:aws:sts::255260342469:assumed-role/newpocRole22jan/newpocRole22jan
+      AWS: arn:aws:sts::255260342469:assumed-role/newpocRole28jan/newpocRole28jan
     Action: execute-api:Invoke
     Resource: '*'
 
@@ -114,7 +114,7 @@ resources:
   newpocRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: newpocRole22jan
+      RoleName: newpocRole28jan
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -128,7 +128,7 @@ resources:
             Action: sts:AssumeRole
             Condition:
               StringLike:
-                sts:RoleSessionName: newpocRole22jan
+                sts:RoleSessionName: newpocRole28jan
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess
 
